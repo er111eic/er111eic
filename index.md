@@ -1,9 +1,9 @@
 ## Hi,I'm Eric!
 ## A UX designer based in Taiwan
 
-TPE TECH IxD M.A.
-UI/UX designer at TMU.
-Previously at ITSA,CCDM
+# TPE TECH IxD M.A.
+# UI/UX designer at TMU.
+# Previously at ITSA,CCDM
 
 
 
