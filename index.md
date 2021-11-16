@@ -1,6 +1,10 @@
 ## Hi,I'm Eric!
 ## A UX designer based in Taiwan
 
+TPE TECH IxD M.A.
+UI/UX designer at TMU.
+Previously at ITSA,CCDM
+
 
 
 You can use the [editor on GitHub](https://github.com/er111eic/er111eic/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
