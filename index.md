@@ -1,4 +1,7 @@
-## Welcome to GitHub Pages
+## Hi,I'm Eric!
+## A UX designer based in Taiwan
+
+
 
 You can use the [editor on GitHub](https://github.com/er111eic/er111eic/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
