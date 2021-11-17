@@ -15,15 +15,12 @@
     $(document).ready(function() {
       // Add smooth scrolling to all links
       $("a").on('click', function(event) {
-
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
           // Prevent default anchor click behavior
           event.preventDefault();
-
           // Store hash
           var hash = this.hash;
-
           // Using jQuery's animate() method to add smooth page scroll
           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
@@ -65,10 +62,11 @@
 
 <body>
   <!-- navbar -->
+  <div id="home"></div>
   <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Navbar-Project">
     <div class="navigation-content">
       <div class="navigation-left">
-        <a href="/" aria-current="page" class="brand w-nav-brand w-current" aria-label="home">
+        <a href="#home" aria-current="page" class="brand w-nav-brand w-current" aria-label="#home">
           <div>Eric.design</div>
         </a>
       </div>
@@ -194,16 +192,26 @@
                   <img src="image/DSC02140.jpg" alt class="testimonial-image">
                   <div class="bg-square-first"></div>
                   <div class="bg-square-second"></div>
-
                 </div>
-                <h1 class="heading-5">
-                  青山依舊在 青山依舊在
-                  <br>
-                  Interactive Design at TPE TECH
-                </h1>
+                <div class="review-wrapper">
+                  <h4 class="heading-3">
+                    青山依舊在 青山依舊在
+                  </h4>
+                  <p class="paragraph-2">
+                    Interactive Design at TPE TECH
+                    <br>
+                    人與人間如何相處，看出修行心態如何。
+                    合作和諧，和平磨合，就是修煉，消除自我諸多成見。
+                    當不平時，進退如何？合道理，一上一下，本是依循真理而進；
+                    如若依然執己故我之要求，不合理事，齊將多餘處來刪改。
+                    <br>
+                    同理心，與當地有緣佛子共暢談，既然有緣，就是一家人，寓教於樂，也可成全。
+                    觀眾生之行為，導其心念，是順勢來梳理；而非強求，鬧的不開心，你一言我一語，各說各話，難達共識。
+                    賢士定然知道其理，知易行難，考驗賢士之智慧。自我認定，定位清楚，各人安分守己，好好修，齊進行。
+                  </p>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -211,6 +219,100 @@
     </div>
 
   </section>
+  <!-- resume -->
+  <div id="resume" class="resume-section">
+    <div class="container-large">
+      <div class="title-left">
+        <h1>Resume</h1>
+      </div>
+      <div class="w-layout-grid resume-grid">
+        <div class="grid-column">
+          <div class="title-wrap-large">
+            <h3>Work Experince</h3>
+          </div>
+          <div class="item-wrap">
+            <div class="resume-title">
+              <h4 class="resume-heading">TMU</h4>
+            </div>
+            <div class="resume-type">UI/UX Desinger</div>
+            <p>07 / 2020 - 01 / 2021</p>
+          </div>
+          <div class="item-wrap">
+            <div class="resume-title">
+              <h4 class="resume-heading">TMU</h4>
+            </div>
+            <div class="resume-type">UI/UX Desinger</div>
+            <p>07 / 2020 - 01 / 2021</p>
+          </div>
+          <div class="item-wrap">
+            <div class="resume-title">
+              <h4 class="resume-heading">TMU</h4>
+            </div>
+            <div class="resume-type">UI/UX Desinger</div>
+            <p>07 / 2020 - 01 / 2021</p>
+          </div>
+        </div>
+        <div class="grid-column">
+          <div class="title-wrap-large">
+            <h3>Work Experince</h3>
+          </div>
+          <div class="item-wrap">
+            <div class="resume-title">
+              <h4 class="resume-heading">TMU</h4>
+            </div>
+            <div class="resume-type">UI/UX Desinger</div>
+            <p>07 / 2020 - 01 / 2021</p>
+          </div>
+          <div class="item-wrap">
+            <div class="resume-title">
+              <h4 class="resume-heading">TMU</h4>
+            </div>
+            <div class="resume-type">UI/UX Desinger</div>
+            <p>07 / 2020 - 01 / 2021</p>
+          </div>
+          <div class="item-wrap">
+            <div class="resume-title">
+              <h4 class="resume-heading">TMU</h4>
+            </div>
+            <div class="resume-type">UI/UX Desinger</div>
+            <p>07 / 2020 - 01 / 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- banner -->
+  <div class="content-section">
+    <div class="container">
+      <div class="cta-block">
+        <h1>Looking for an awesome group of people to work with. Feel free to reach out to me. </h1>
+        <a class="cta-link-large-2 w-inline-block" href="mailto:er111eic@gmail.com">
+          <div class="cta-text">Let's connect!</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer-section">
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-links-wrap">
+          <div class="w-layout-grid social-grid">
+            <a class="social-link w-inline-block" href="https://www.instagram.com/li.s_tw/" target="_blank"></a>
+
+            <a class="social-link w-inline-block" href="https://www.instagram.com/li.s_tw/" target="_blank"></a>
+          </div>
+          <a href="#home" class="footer-brand w-nav-brand w--current">
+            <div>
+              eric.design
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 
 </body>
