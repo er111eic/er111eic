@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Eric Li - UX Designer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../layout.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap" media="all" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
+  <!-- 滾動 -->
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1500, 'easeInOutSine', function() {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    $(document).ready(function() {
+      const reviewSlider = document.querySelector('.reviewSlider');
+      reviewSlider.classList.remove('reviewSlider-transition');
+
+      // Create the observer, same as before:
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            reviewSlider.classList.add('reviewSlider-transition');
+            return;
+          }
+
+          reviewSlider.classList.remove('reviewSlider-transition');
+        });
+      });
+      observer.observe(document.querySelector('.reviewSlider-wrapper'));
+    });
+  </script>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div id="home"></div>
+  <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Navbar-Project">
+    <div class="navigation-content">
+      <div class="navigation-left">
+        <a href="../index.html" aria-current="page" class="brand w-nav-brand w-current" aria-label="#home">
+          <div>Eric.design</div>
+        </a>
+      </div>
+      <div class="navigation-right">
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <a href="#work" class="nav-link w-nac-link">Work</a>
+          <a href="#about" class="nav-link w-nac-link">About</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="top-button">
+    <a href="#home" class="back-top">Top</a>
+  </div>
+  <!-- header -->
+  <div class="header">
+    <div class="container">
+      <h2>AR Time Gate 『鑑往』</h2>
+      <h4>歷史遺產視覺環境，由現在看見過去</h4>
+      <div class="w-layout-grid project-overview">
+        <div class="project-detail">People</div>
+        <div class="project-detail">Me</div>
+        <div class="project-detail">Tools</div>
+        <div class="project-detail">
+          Unity<br>
+          SketchUp<br>
+          Xcode</div>
+        <div class="project-detail">Duration</div>
+        <div class="project-detail">Nov.2018 - jan.2019</div>
+        <div class="project-detail">Expertise</div>
+        <div class="project-detail">
+          User Research<br>
+          Interaction Design<br>
+          Augmented Reality<br>
+          Occlusion<br>
+          Location base AR<br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-content">
+    <img class="project-hero-image" src="../image/past/1.png" alt="">
+    <img class="project-hero-image" src="../image/past/2.png" alt="">
+    <img class="project-hero-image" src="../image/past/3.png" alt="">
+    <img class="project-hero-image" src="../image/past/4.png" alt="">
+    <img class="project-hero-image" src="../image/past/5.png" alt="">
+    <img class="project-hero-image" src="../image/past/6.png" alt="">
+    <img class="project-hero-image" src="../image/past/7.png" alt="">
+    <img class="project-hero-image" src="../image/past/8.png" alt="">
+    <img class="project-hero-image" src="../image/past/9.gif" alt="">
+    <img class="project-hero-image" src="../image/past/10.png" alt="">
+    <img class="project-hero-image" src="../image/past/11.gif" alt="">
+    <img class="project-hero-image" src="../image/past/12.gif" alt="">
+    <img class="project-hero-image" src="../image/past/13.png" alt="">
+    <img class="project-hero-image" src="../image/past/14.png" alt="">
+    <img class="project-hero-image" src="../image/past/15.gif" alt="">
+    <img class="project-hero-image" src="../image/past/16.png" alt="">
+    <img class="project-hero-image" src="../image/past/17.png" alt="">
+    <img class="project-hero-image" src="../image/past/18.gif" alt="">
+    <img class="project-hero-image" src="../image/past/19.png" alt="">
+  </div>
+  <!-- work -->
+  <div id=" work" class="content-section">
+    <div class="container">
+      <div class="title-left">
+        <h1>Next Projects</h1>
+      </div>
+      <div class="w-layout-grid project-grid">
+        <div class="grid-column">
+          <div class="w-dyn-list">
+            <div role="list" class="collection-list w-dyn-items w-row">
+              <div role="listitem" class="project w-dyn-items w-col w-col-6">
+                <a href="" class="project-wrap w-inline-block">
+                  <div class="project-detail-wrap">
+                    <h4>Relative Projects</h4>
+                    <p>
+                      About &ensp; UI &ensp; UX &ensp;AR
+                    </p>
+                  </div>
+                  <div class="project-square">
+                    <img loading="lazy" src="../image/future/hero.jpg" class="project-image">
+                    </img>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-column-large">
+          <div class="w-dyn-list">
+            <div role="list" class="collection-list w-dyn-items w-row">
+              <div role="listitem" class="project w-dyn-items w-col w-col-6">
+                <a href="" class="project-wrap w-inline-block">
+                  <div class="project-detail-wrap">
+                    <h4>Others</h4>
+                    <p>
+                      About &ensp; UX &ensp; Service Design
+                    </p>
+                  </div>
+                  <div class="project-square">
+                    <img loading="lazy" src="../image/voluncure/hero.jpg" class="project-image">
+                    </img>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <!-- banner -->
+  <div class="content-section">
+    <div class="container">
+      <div class="cta-block">
+        <h1>Looking for an awesome group of people to work with. Feel free to reach out to me. </h1>
+        <a class="cta-link-large-2 w-inline-block" href="mailto:er111eic@gmail.com">
+          <div class="cta-text">Let's connect!</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer-section">
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-links-wrap">
+          <div class="w-layout-grid social-grid">
+            <a class="social-link w-inline-block" href="https://www.instagram.com/li.s_tw/" target="_blank"></a>
+
+            <a class="social-link w-inline-block" href="https://www.instagram.com/li.s_tw/" target="_blank"></a>
+          </div>
+          <a href="../index.html" class="footer-brand w-nav-brand w--current">
+            <div>
+              eric.design
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>

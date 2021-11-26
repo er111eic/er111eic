@@ -1649,6 +1649,7 @@ li {
   object-fit: cover;
   -o-object-position: 50% 30%;
   object-position: 50% 30%;
+  display: block;
 }
 
 .project-content {
