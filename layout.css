@@ -1655,6 +1655,7 @@ li {
 .project-content {
   max-width: 1060px;
   margin: 100px auto 40px;
+  display: block;
 }
 
 .success-message {
@@ -2760,6 +2761,7 @@ li {
 
   .project-content {
     margin-bottom: 60px;
+    display: block;
   }
 
   .licence-grid {
