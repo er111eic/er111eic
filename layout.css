@@ -978,7 +978,7 @@ li {
 .testimonial-image {
   z-index: 5;
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 0%;
@@ -989,7 +989,7 @@ li {
   position: absolute;
   top: 25px;
   left: -25px;
-  width: 100%;
+  width: 80%;
   height: 100%;
   color: #ecd9c7;
   background-color: #edf8ff;
@@ -1000,7 +1000,7 @@ li {
   position: absolute;
   top: 60px;
   left: -60px;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background-color: #f4faff;
 }
@@ -1984,7 +1984,15 @@ li {
     overflow: visible;
   }
 
-  .review-grid {}
+  .testimonial-image {
+    object-fit: cover;
+    width: 60%;
+    height: 400px;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
 
   .slider-arrow-left {
     right: 15%;
