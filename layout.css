@@ -123,7 +123,7 @@ li {
 
 .nav-link {
   padding-right: 30px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   color: #0d0e10;
   text-decoration: none;
   font-size: 14px;
@@ -169,21 +169,13 @@ li {
 }
 
 .navigation-content {
-  display: flex;
+  display: contents;
   width: 100%;
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
 }
 
-/**
- * .navigation-container { display: -webkit-box; display: -webkit-flex; display:
- * -ms-flexbox; display: flex; width: 100%; max-width: 1060px; margin-right:
- * auto; margin-left: auto; -webkit-box-pack: justify; -webkit-justify-content:
- * space-between; -ms-flex-pack: justify; justify-content: space-between;
- * -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align:
- * stretch; align-items: stretch; }
- */
 .brand {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1008,6 +1000,7 @@ li {
 .paragraph-2 {
   line-height: 1.9;
   letter-spacing: 0.02em;
+  text-align: justify;
 }
 
 .heading-3 {
@@ -1601,6 +1594,7 @@ li {
 
 .heading-5 {
   width: auto;
+  /* text-align: center; */
 }
 
 .cta-link-large-2 {
@@ -1823,9 +1817,9 @@ li {
 @media screen and (max-width : 991px) {
   .nav-link {
     width: 100%;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 45px;
+    /* padding-top: 32px;
+    padding-bottom: 32px; */
+    /* padding-left: 45px; */
   }
 
   .menu-button {
@@ -1859,15 +1853,18 @@ li {
   }
 
   .nav-menu {
-    background-color: #f4f6fb;
+    /* background-color: #ededed; */
   }
 
   .navigation-right {
+    text-align: right;
     -webkit-box-align: center;
     width: auto;
     -webkit-align-items: center;
     align-items: center;
     -ms-flex-align: center;
+    position: absolute;
+    right: 0px;
   }
 
   .navigation-left {
@@ -1943,7 +1940,7 @@ li {
   }
 
   .hero-display {
-    font-size: 72px;
+    font-size: 60px;
   }
 
   .client-section {
@@ -1986,12 +1983,24 @@ li {
 
   .testimonial-image {
     object-fit: cover;
-    width: 60%;
-    height: 400px;
+    object-position: center;
+    width: 80%;
+    height: 350px;
   }
 
   .review-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+  }
+
+  .heading-5 {
+    font-size: 35px;
+    text-align: left;
+  }
+
+  .review-slide {
+    align-items: center;
+    /* width: 80%; */
+    padding: 5%;
   }
 
   .slider-arrow-left {
@@ -2074,13 +2083,20 @@ li {
 }
 
 @media screen and (max-width : 479px) {
+  h1 {
+    font-size: 35px;
+    text-align: justify;
+    line-height: 40px;
+  }
+
   .brand {
     margin-right: 0px;
   }
 
   .navbar {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    min-height: 80px;
+    padding-top: 50px;
+    padding-bottom: 10px;
   }
 
   .navigation-icon-wrap {
@@ -2088,7 +2104,19 @@ li {
   }
 
   .header {
-    padding-bottom: 60px;
+    padding: 50px 4%;
+  }
+
+  .about-section {
+    position: relative;
+    padding: 0px 3%;
+    overflow: hidden;
+  }
+
+  .heading-5 {
+    font-size: 20px;
+    text-align: left;
+    line-height: normal;
   }
 
   .hero-display {
@@ -2147,6 +2175,13 @@ li {
     height: 100%;
   }
 
+  .testimonial-image {
+    object-fit: cover;
+    object-position: center;
+    width: 70%;
+    height: 250px;
+  }
+
   .review-wrapper {
     padding-right: 6px;
     padding-left: 6px;
@@ -2182,6 +2217,11 @@ li {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  .cta-link-large-2 {
+    font-size: 35px;
+    text-align: center;
   }
 
   .hero-display-projects {
