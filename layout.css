@@ -206,6 +206,9 @@ li {
   display: flex;
   -webkit-box-align: center;
   min-height: 128px;
+  max-width: 1000px;
+  margin: auto;
+  object-position: center;
   padding: 28px 4%;
   background-color: transparent;
   -webkit-align-items: center;
