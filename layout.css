@@ -2088,7 +2088,7 @@ li {
 @media screen and (max-width : 479px) {
   h1 {
     font-size: 35px;
-    text-align: justify;
+    text-align: left;
     line-height: 40px;
   }
 
