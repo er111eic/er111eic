@@ -8,6 +8,14 @@
   /* margin: 5%; */
 }
 
+.l-layout-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  /* margin: 5%; */
+}
+
 body {
   color: #333;
   font-family: 'Noto Sans TC',
@@ -573,6 +581,12 @@ li {
 }
 
 .resume-grid {
+  grid-column-gap: 42px;
+  grid-row-gap: 42px;
+  grid-template-rows: auto auto;
+}
+
+.skill-grid {
   grid-column-gap: 42px;
   grid-row-gap: 42px;
   grid-template-rows: auto auto;
@@ -1446,6 +1460,12 @@ li {
 }
 
 .resume-section {
+  position: relative;
+  padding: 140px 3%;
+  overflow: hidden;
+}
+
+.skill-section {
   position: relative;
   padding: 140px 3%;
   overflow: hidden;
