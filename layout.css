@@ -1852,6 +1852,21 @@ li {
   object-fit: cover;
 }
 
+.image-grid-2 {
+  box-sizing: border-box;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 300px;
+  grid-gap: 16px;
+}
+
+.image-grid-2>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .image-grid-col-2 {
   grid-column: span 2;
 }
@@ -1861,7 +1876,8 @@ li {
 }
 
 .image-grid-col-05 {
-  grid-column: span 1;
+  /* grid-column: 1 / 4; */
+  grid-row: span 2/20;
 }
 
 .image-img>img {
