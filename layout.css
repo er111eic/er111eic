@@ -1173,7 +1173,7 @@ li {
 .project-content {
   display: block;
   max-width: 1060px;
-  margin: 100px auto 40px;
+  margin: 50px auto 40px;
 }
 
 .standard-header {
@@ -1837,6 +1837,81 @@ li {
   margin-bottom: 40px;
 }
 
+.image-grid {
+  box-sizing: border-box;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 300px;
+  grid-gap: 16px;
+}
+
+.image-grid>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+
+.image-grid-row-2 {
+  grid-row: span 2;
+}
+
+.image-img>img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: relative;
+  top: -300px;
+  /* bottom: 0px; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image-overlay-blur {
+  backdrop-filter: blur(100px);
+}
+
+.image-overlay>* {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+.image-overlay:hover>* {
+  transform: translateY(0);
+}
+
+.image-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image-title-description {
+  font-size: 1.25em;
+  margin-top: 1.25em;
+  color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width : 991px) {
   .nav-link {
     width: 100%;
@@ -1954,6 +2029,11 @@ li {
 
   .gallery-grid-container {
     -webkit-align-self: stretch;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 300px;
   }
 }
 
