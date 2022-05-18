@@ -1885,7 +1885,7 @@ li {
 }
 
 .image-overlay-blur {
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(5px);
 }
 
 .image-overlay>* {
