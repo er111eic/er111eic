@@ -1860,6 +1860,10 @@ li {
   grid-row: span 2;
 }
 
+.image-grid-col-05 {
+  grid-column: span 1;
+}
+
 .image-img>img {
   display: block;
   width: 100%;
@@ -1902,6 +1906,7 @@ li {
 }
 
 .image-title {
+  color: rgb(255, 255, 255);
   font-size: 2em;
   font-weight: bold;
 }
