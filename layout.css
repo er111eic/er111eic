@@ -1857,7 +1857,7 @@ li {
   padding: 16px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 300px;
+  grid-auto-rows: 350px;
   grid-gap: 16px;
 }
 
@@ -1875,9 +1875,20 @@ li {
   grid-row: span 2;
 }
 
-.image-grid-col-05 {
-  /* grid-column: 1 / 4; */
-  grid-row: span 2/20;
+.image-grid-row-3 {
+  grid-row: span 3;
+}
+
+.image-grid-col-3 {
+  grid-column: span 3;
+}
+
+.image-grid-row-4 {
+  grid-row: span 4;
+}
+
+.image-grid-col-4 {
+  grid-column: span 4;
 }
 
 .image-img>img {
@@ -1936,9 +1947,10 @@ li {
 @media screen and (max-width : 991px) {
   .nav-link {
     width: 100%;
+    font-size: 12px;
     /* padding-top: 32px;
     padding-bottom: 32px; */
-    /* padding-left: 45px; */
+    padding-right: 10px;
   }
 
   .menu-button {
@@ -1976,7 +1988,7 @@ li {
   }
 
   .navigation-right {
-    text-align: right;
+    text-align: center;
     -webkit-box-align: center;
     width: auto;
     -webkit-align-items: center;
@@ -2054,7 +2066,62 @@ li {
 
   .image-grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 300px;
+    grid-auto-rows: 200px;
+  }
+
+  .image-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .image-grid-row-3 {
+    grid-row: span 1;
+  }
+
+  .image-grid-col-3 {
+    grid-column: span 1;
+  }
+
+  .image-grid-row-4 {
+    grid-row: span 2;
+  }
+
+  .image-grid-col-4 {
+    grid-column: span 2;
+  }
+
+  .image-overlay {
+    position: relative;
+    top: -80px;
+    /* bottom: 0px; */
+    /* left: 0; */
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+    transition: opacity 0.25s;
+  }
+
+  .image-title {
+    color: rgb(87, 87, 87);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .image-title-description {
+    font-size: 1em;
+    margin-top: 1em;
+    color: rgb(87, 87, 87);
+  }
+
+  .image-overlay>* {
+    transform: translateY(5px);
+    transition: transform 0.25s;
   }
 }
 
