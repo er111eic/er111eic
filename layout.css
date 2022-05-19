@@ -2038,6 +2038,11 @@ li {
     height: 420px;
   }
 
+  .project-detail-wrap {
+    padding-top: 13px;
+    padding-left: 40px;
+  }
+
   .slider-arrow {
     bottom: auto;
   }
@@ -2156,7 +2161,12 @@ li {
   }
 
   .project-square {
-    height: 580px;
+    height: 400px;
+  }
+
+  .project-detail-wrap {
+    padding-top: 10px;
+    padding-left: 55px;
   }
 
   .project-grid {
@@ -2290,6 +2300,11 @@ li {
 
   h4 {
     font-size: 18px;
+    /* line-height: .8; */
+  }
+
+  p {
+    font-size: 13px;
   }
 
   .brand {
@@ -2366,8 +2381,23 @@ li {
 
   .social-grid {}
 
+  .project {
+    margin-bottom: 30px;
+  }
+
+  .project-header {
+    height: 600px;
+  }
+
   .project-square {
-    height: 460px;
+    height: 380px;
+  }
+
+  .project-detail-wrap {
+    display: none;
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: left;
   }
 
   .large-image-wrap {
@@ -2392,10 +2422,6 @@ li {
 
   .slider-arrow-left {
     right: 25%;
-  }
-
-  .project-header {
-    height: 650px;
   }
 
   .change-log-wrap {
