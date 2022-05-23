@@ -264,7 +264,7 @@ li {
   -webkit-box-orient: vertical;
   -webkit-box-pack: center;
   max-width: 200px;
-  padding: 16px 40px;
+  padding: 16px 20px;
   align-items: center;
   -webkit-align-self: flex-start;
   flex-direction: column;
@@ -274,6 +274,7 @@ li {
   border-radius: 50px;
   border: .2px solid rgb(208, 208, 208);
   color: rgb(128, 128, 128);
+  text-align: center;
 }
 
 .header-title-wrap {
@@ -2165,6 +2166,33 @@ li {
 
   .grid {
     grid-row-gap: 32px;
+  }
+
+  .header-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 10px;
+    grid-gap: 50px;
+  }
+
+  .header-button {
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    max-width: 100px;
+    padding: 15px 20px;
+    align-items: center;
+    -webkit-align-self: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-self: flex-start;
+    border-radius: 50px;
+    border: .2px solid rgb(208, 208, 208);
+    color: rgb(128, 128, 128);
+    text-align: center;
   }
 
   .style-guide-hero {
