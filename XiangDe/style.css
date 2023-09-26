@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /* width: auto; */
+    display:grid;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url(image/whitewall.jpg);
+    /* background-color: rgb(252, 247, 232); */
+}
+
+.table{
+    /* width:150vh; */
+    /* padding-top: 100px; */
+    /* margin-top: 150px; */
+    /* height:50px; */
+    /* overflow-x: auto; */
+
+}
+
+/* Book */
+.book {
+    margin-top:240px;
+    position:relative;
+    width: 350px;
+    transition: transform 1.5s;
+    filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.4))
+
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+img{
+    max-width: 100%;
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 1.5s;
+}
+
+.front2,
+.back2 {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: right;
+    transition: transform 1.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid rgb(26, 26, 21);
+}
+
+.back {
+    z-index: 0;
+}
+
+.front2 {
+    z-index: 1;
+    backface-visibility: hidden;
+
+}
+
+.back2 {
+    z-index: 0;
+    border-right: 3px solid rgb(26, 26, 21);
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-content2,
+.back-content2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+
+
+.back-content2 {
+    transform: rotateY(-180deg)
+}
+
+/* Paper flip effect */
+.flipped2 .front2,
+.flipped2 .back2 {
+    transform: rotateY(180deg);
+}
+
+
+
+/* Controller Buttons */
+
+abc{
+    /* margin: 15px; */
+    padding-right: 40px;
+    opacity: 0;
+}
+
+button {
+    position:sticky;
+    border: none;
+    opacity: 1;
+    /* flex-wrap: wrap; */
+    background-color: transparent;
+    cursor: pointer;
+    /* margin: 15px; */
+    padding-left:80px;
+    /* padding-right:40px;  */
+    transition: transform 1.2s;
+    z-index: 4;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index:2;
+}
+
+#p2 {
+    z-index: 1;
+}
+
+#p3 {
+    z-index: 0;
+}
