@@ -17,9 +17,10 @@ body {
 }
 
 .table1{
+    transform-origin: center;
     position: fixed;
-    top: 80%;
-    left: 38%;
+    top: 90%;
+    right:30%;
     z-index: 5;
     width: auto;
     height: 30px;
