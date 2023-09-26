@@ -16,13 +16,20 @@ body {
     /* background-color: rgb(252, 247, 232); */
 }
 
-.table{
-    /* width:150vh; */
-    /* padding-top: 100px; */
-    /* margin-top: 150px; */
-    /* height:50px; */
-    /* overflow-x: auto; */
-
+.table1{
+    position: fixed;
+    top: 80%;
+    left: 38%;
+    z-index: 5;
+    width: auto;
+    height: 30px;
+    /* border: 0.5px solid rgb(26, 26, 21); */
+    display: grid;
+    grid-template-columns: 50px 80px 50px;
+}
+.warn{
+  opacity: 0.4;
+  /* padding: 10px; /* padding-bottom: 200px; */ */
 }
 
 /* Book */
@@ -137,21 +144,21 @@ img{
 
 /* Controller Buttons */
 
-abc{
+.abc{
     /* margin: 15px; */
     padding-right: 40px;
     opacity: 0;
 }
 
 button {
-    position:sticky;
+    /* position:sticky; */
     border: none;
     opacity: 1;
     /* flex-wrap: wrap; */
     background-color: transparent;
     cursor: pointer;
     /* margin: 15px; */
-    padding-left:80px;
+    /* padding-left:80px; */
     /* padding-right:40px;  */
     transition: transform 1.2s;
     z-index: 4;
