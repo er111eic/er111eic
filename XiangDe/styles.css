@@ -20,7 +20,8 @@ body {
     transform-origin: center;
     position: fixed;
     top: 90%;
-    right:30%;
+    left:50%;
+    transform:translateX(-50%);
     z-index: 5;
     width: auto;
     height: 30px;
