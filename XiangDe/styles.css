@@ -65,6 +65,7 @@ img{
     height: 100%;
     top: 0;
     left: 0;
+    /* opacity: 0.2; */
     transform-origin: left;
     transition: transform 1.5s;
 }
