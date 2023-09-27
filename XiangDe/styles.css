@@ -27,7 +27,7 @@ body {
     height: 30px;
     /* border: 0.5px solid rgb(26, 26, 21); */
     display: grid;
-    grid-template-columns: 50px 80px 50px;
+    grid-template-columns: 50px 120px 50px;
 }
 .warn{
   opacity: 0.4;

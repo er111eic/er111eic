@@ -38,12 +38,13 @@ function goNextPage() {
            case 1:
                openBook();
                paper1.classList.add("flipped");
-               prevBtn.style.opacity=1;
+               prevBtn.style.opacity=0;
                break;
            case 2:
                paper2.classList.add("flipped2");
                abc.style.transform="translateX(900px)";
                book.style.transform = "translateX(100%)";
+               prevBtn.style.opacity=1;
                // prevBtn.style.transform = "translateX(420px)";
                // nextBtn.style.transform = "translateX(770px)";
                nextBtn.style.opacity = 0;
