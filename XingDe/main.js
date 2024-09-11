@@ -18,7 +18,9 @@ let numOfPapers = 2;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
-   book.style.transform = "translateX(-80%)";
+   book.style.transform = "translateX(-60%)","width(140vw)";
+   // container.style.transform = "width(200%)";
+
    // abc.style.transform="translateX(-1000px)";
 
    // prevBtn.style.transform = "translateX(0px)";
@@ -40,13 +42,15 @@ function goNextPage() {
            case 1:
                openBook();
                paper2.classList.add("flipped2");
-               abc.style.transform="translateX(-500px)";
+               abc.style.transform="translateX(-500%)";
+
                // book.style.transform = "translateX(100%)";
                prevBtn.style.opacity=0;
                break;
            case 2:
                paper1.classList.add("flipped");
                // abc.style.transform="translateX(-900px)";
+               // body.style.width = '200%';
                book.style.transform = "translateX(10%)";
                prevBtn.style.opacity=1;
                // prevBtn.style.transform = "translateX(420px)";
