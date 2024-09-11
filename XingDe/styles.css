@@ -146,6 +146,11 @@ img{
 
 
 /* Controller Buttons */
+.wrap{
+ width: auto;
+ margin: 0 auto;
+}
+
 
 .abc{
     /* margin: 15px; */
