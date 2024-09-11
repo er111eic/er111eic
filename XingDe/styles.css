@@ -147,8 +147,10 @@ img{
 
 /* Controller Buttons */
 .wrap{
- width: auto;
- margin: 0 auto;
+ width: 80%;
+ height: 80%;
+ /* margin: 100% auto; */
+ overflow:auto;
 }
 
 
