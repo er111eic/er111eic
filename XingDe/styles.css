@@ -6,15 +6,18 @@
 
 body {
     min-height: 100vh;
-    width: auto;
+    /* width: 100%; */
     display:flex;
+    /* position:relative; */
+    /* transform-origin: center; */
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center;s/ */
     align-items: center;
     font-family: sans-serif;
     background-image: url(image/whitewall.jpg);
     /* background-color: rgb(252, 247, 232); */
     overflow-x: auto;
+    margin:0;
 }
 
 .table1{
@@ -38,14 +41,16 @@ body {
 
 /* Book */
 .book {
-    margin:20vw;
-    height: 80vh;
+    /* margin:20vw; */
+    display: flex;
+    /* height: 80vh; */
     align-items: center;
     justify-content: center;
     transform-origin: center;
     position:relative;
-    min-width:500px;
+    width:400px;
     transition: transform 1.5s;
+    /* opacity: 0.2; */
     filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.3));
     /* overflow-x:scroll; */
 
@@ -167,10 +172,11 @@ overflow-x:scroll;
 
 
 .abc{
-    /* margin: 15px; */
+    /* margin-right:50px; */
     /* padding-right: 40px; */
     opacity: .2;
-    z-index: 4;
+    /* z-index: 4; */
+    /* overflow: scroll; */
 }
 
 button {
