@@ -13,6 +13,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     background-image: url(image/whitewall.jpg);
+    overflow:auto;
     /* background-color: rgb(252, 247, 232); */
 }
 
@@ -146,8 +147,8 @@ img{
 
 
 /* Controller Buttons */
-.wrap{
- width: 80%;
+.box{
+ width: auto;
  height: 80%;
  /* margin: 100% auto; */
  overflow:auto;
@@ -158,6 +159,7 @@ img{
     /* margin: 15px; */
     padding-right: 40px;
     opacity: 60;
+    z-index: 4;
 }
 
 button {
