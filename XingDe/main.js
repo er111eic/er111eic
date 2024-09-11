@@ -18,7 +18,7 @@ let numOfPapers = 2;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
-   book.style.transform = "translateX(100%)";
+   book.style.transform = "translateX(-100%)";
    // prevBtn.style.transform = "translateX(0px)";
    // nextBtn.style.transform = "translateX(400px)";
 }
@@ -37,13 +37,15 @@ function goNextPage() {
        switch(currentLocation) {
            case 1:
                openBook();
-               paper1.classList.add("flipped");
+               paper2.classList.add("flipped2");
+               abc.style.transform="translateX(-400px)";
+               // book.style.transform = "translateX(100%)";
                prevBtn.style.opacity=0;
                break;
            case 2:
-               paper2.classList.add("flipped2");
-               abc.style.transform="translateX(900px)";
-               book.style.transform = "translateX(100%)";
+               paper1.classList.add("flipped");
+               // abc.style.transform="translateX(-900px)";
+               book.style.transform = "translateX(20%)";
                prevBtn.style.opacity=1;
                // prevBtn.style.transform = "translateX(420px)";
                // nextBtn.style.transform = "translateX(770px)";
@@ -67,13 +69,13 @@ function goPrevPage() {
        switch(currentLocation) {
            case 2:
                closeBook(true);
-               paper1.classList.remove("flipped");
+               paper2.classList.remove("flipped2");
                // nextBtn.style.transform = "translateX(0px)";
                abc.style.transform="translateX(0px)";
-               paper1.style.zIndex = 3;
+               // paper1.style.zIndex = 3;
                break;
            case 3:
-               paper2.classList.remove("flipped2");
+               paper1.classList.remove("flipped");
                book.style.transform = "translateX(100%)";
                // prevBtn.style.transform = "translateX(200px)";
                // nextBtn.style.transform = "translateX(400px)";

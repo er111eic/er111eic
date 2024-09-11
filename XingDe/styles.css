@@ -122,25 +122,25 @@ img{
 }
 
 .back-content {
-    transform: rotateY(180deg)
+    transform: rotateY(181deg)
 }
 
 /* Paper flip effect */
 .flipped .front,
 .flipped .back {
-    transform: rotateY(-180deg);
+    transform: rotateY(-181deg);
 }
 
 
 
 .back-content2 {
-    transform: rotateY(-180deg)
+    transform: rotateY(-181deg)
 }
 
 /* Paper flip effect */
 .flipped2 .front2,
 .flipped2 .back2 {
-    transform: rotateY(180deg);
+    transform: rotateY(181deg);
 }
 
 
@@ -150,7 +150,7 @@ img{
 .abc{
     /* margin: 15px; */
     padding-right: 40px;
-    opacity: 0;
+    opacity: 60;
 }
 
 button {
@@ -182,11 +182,11 @@ i {
 
 /* Paper stack order */
 #p1 {
-    z-index:2;
+    z-index:1;
 }
 
 #p2 {
-    z-index: 1;
+    z-index:2;
 }
 
 #p3 {
