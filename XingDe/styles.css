@@ -170,7 +170,7 @@ img{
     input[type="range"] {
         width: 100%;
         transform-origin: center;
-        display: block; /* 顯示滑動條 */
+        display: inline-block; /* 顯示滑動條 */
     }
 }
 
