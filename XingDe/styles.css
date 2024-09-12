@@ -15,7 +15,7 @@ body {
       margin: auto;
       overflow-x:hidden;/* 啟用水平滾動條 */
       transition: transform 0.5s; /* 過渡效果 */
-      grid-template-rows: 80vh 10vh;
+      grid-template-rows: 70vh 15vh;
 }
 
 .container{
