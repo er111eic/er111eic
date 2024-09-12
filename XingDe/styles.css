@@ -11,7 +11,7 @@ body {
     display: grid;
       justify-content: center;
       align-items: center;
-      min-height:100vh;
+      /* min-height:100vh; */
       margin: auto;
       overflow-x:hidden;/* 啟用水平滾動條 */
       transition: transform 0.5s; /* 過渡效果 */
