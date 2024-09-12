@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 const container = document.querySelector('.container');
+const slider = document.getElementById('slider');
 const body = document.body;
 
 let startX=0, currentX=0;
@@ -140,7 +141,7 @@ cardElement.addEventListener('touchstart', handleTouchStart);
 cardElement.addEventListener('touchmove', handleTouchMove);
 cardElement.addEventListener('touchend', handleTouchEnd);
 
-            cardElement.addEventListener('mousedown', (e) => {
+cardElement.addEventListener('mousedown', (e) => {
             e.preventDefault();
                    startX = e.clientX;
                    isDragging = true;
@@ -159,6 +160,13 @@ document.addEventListener('mouseup', (e) => {
         document.querySelector('.container').style.transform = 'translateX(0px)';
         e.preventDefault();
         });
+
+        slider.addEventListener('input', (e) => {
+                const value = e.target.value;
+                cardElement.style.transform = `translateX(${value*1.4}px)`;
+            });
+
+
 });
 
 
