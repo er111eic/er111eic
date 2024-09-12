@@ -1,8 +1,9 @@
 // References to DOM Elements
 const container = document.querySelector('.container');
 const body = document.body;
+
+let startX, currentX;
 let isDown = false;
-let startX, scrollLeft;
 
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
@@ -110,34 +111,18 @@ function goPrevPage() {
    }
 }
 
-// 監聽滑鼠按下事件
-container.addEventListener('mousedown', (e) => {
-  isDown = true;
-  container.style.cursor = 'grabbing';
-  startX = e.pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-});
+document.querySelector('.container').addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDragging = true;
+    });
 
-// 監聽滑鼠放開事件
-container.addEventListener('mouseup', () => {
-  isDown = false;
-  container.style.cursor = 'grab';
-});
+document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        currentX = e.clientX - startX;
+document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
+    });
 
-// 監聽滑鼠離開事件
-container.addEventListener('mouseleave', () => {
-  isDown = false;
-  container.style.cursor = 'grab';
-});
-
-// 觸控事件支持
-container.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].pageX - container.offsetLeft;
-  scrollLeft = container.scrollLeft;
-});
-
-container.addEventListener('touchmove', (e) => {
-  const x = e.touches[0].pageX - container.offsetLeft;
-  const walk = (x - startX); // 計算滑動距離
-  container.scrollLeft = scrollLeft - walk; // 更新scrollLeft實現拖動效果
-});
+document.addEventListener('mouseup', () => {
+        isDragging = false;
+document.querySelector('.container').style.transform = 'translateX(0px)';
+    });

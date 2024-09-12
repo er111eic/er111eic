@@ -11,22 +11,23 @@ body {
     display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      min-height: 90vh;
       margin: 0;
       overflow-x:hidden;/* 啟用水平滾動條 */
       transition: transform 0.5s; /* 過渡效果 */
 }
 
 .container{
-  display: flex;
+  display:flex;
    justify-content: center; /* 水平居中 */
    align-items: center; /* 垂直居中 */
    transition: transform 0.5s; /* 過渡效果 */
    transform-origin: center; /* 設置變換中心為容器的中心 */
    width: 100%; /* 初始寬度設為100% */
-   position: relative;
    cursor: grab; /* 手勢拖動指標 */
-  font-family: sans-serif;
+   /* overflow-x:scroll; */
+   position: relative;
+  /* font-family: sans-serif; */
 /* transition: width 0.5;／ */
 /* margin: 100% auto; */
 }
@@ -53,7 +54,7 @@ body {
 /* Book */
 .book {
     display: flex;
-    cursor: pointer;
+    /* cursor: pointer; */
     align-items: center;
     justify-content: center;
     position:relative;
