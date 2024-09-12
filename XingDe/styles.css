@@ -30,6 +30,8 @@ body {
   /* font-family: sans-serif; */
 /* transition: width 0.5;／ */
 /* margin: 100% auto; */
+/* margin-top: : 10px; */
+top:10vh;
 }
 
 .table1{
@@ -164,7 +166,11 @@ img{
 
 
 input[type="range"] {
-    width: 300px;
+    width: 100%;
+    transform-origin: center;
+
+    /* top: 90%; */
+    z-index:5;
 }
 
 
