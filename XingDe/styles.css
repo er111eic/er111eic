@@ -174,9 +174,11 @@ img{
     }
 }
 
+@media (pointer: fine) {
+  input[type="range"] {
+        display: none; /* 隱藏滑動條 */
+  }
 
-input[type="range"] {
-      display: none; /* 隱藏滑動條 */
 }
 
 
