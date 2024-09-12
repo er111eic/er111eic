@@ -112,7 +112,7 @@ function goPrevPage() {
 }
 
 const handleTouchStart = (e) => {
-  event.preventDefault();
+  e.preventDefault();
         startX = e.touches[0].clientX; // 紀錄觸控起始位置
         isDragging = true;
     };
@@ -120,14 +120,14 @@ const handleTouchMove = (e) => {
         if (!isDragging) return;
         currentX = e.touches[0].clientX - startX; // 計算拖動距離
         document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
-        event.preventDefault();
+        e.preventDefault();
         };
 
-const handleTouchEnd = () => {
+const handleTouchEnd = (e) => {
         isDragging = false;
         document.querySelector('.container').style.transform = 'translateX(0px)'; // 恢復原位
-        event.preventDefault();
-        };
+        e.preventDefault();
+      };
 
         // 綁定觸控事件
 const cardElement = document.querySelector('.container');
@@ -150,7 +150,7 @@ document.addEventListener('mousemove', (e) => {
         event.preventDefault();
        });
 
-document.addEventListener('mouseup', () => {
+document.addEventListener('mouseup', (e) => {
         isDragging = false;
         document.querySelector('.container').style.transform = 'translateX(0px)';
         event.preventDefault();
