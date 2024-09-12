@@ -3,7 +3,7 @@ const container = document.querySelector('.container');
 const body = document.body;
 
 let startX, currentX;
-let isDown = false;
+let isDragging = false;
 
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
@@ -111,18 +111,64 @@ function goPrevPage() {
    }
 }
 
-document.querySelector('.container').addEventListener('mousedown', (e) => {
-        startX = e.clientX;
+const handleTouchStart = (e) => {
+        startX = e.touches[0].clientX; // 紀錄觸控起始位置
         isDragging = true;
-    });
+    };
+const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX - startX; // 計算拖動距離
+        document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
+        };
+
+const handleTouchEnd = () => {
+        isDragging = false;
+        document.querySelector('.container').style.transform = 'translateX(0px)'; // 恢復原位
+        };
+
+        // 綁定觸控事件
+const cardElement = document.querySelector('.container');
+            cardElement.addEventListener('touchstart', handleTouchStart);
+            cardElement.addEventListener('touchmove', handleTouchMove);
+            cardElement.addEventListener('touchend', handleTouchEnd);
+
+            cardElement.addEventListener('mousedown', (e) => {
+                   startX = e.clientX;
+                   isDragging = true;
+               });
+
 
 document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         currentX = e.clientX - startX;
-document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
-    });
+        document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
+       });
 
 document.addEventListener('mouseup', () => {
         isDragging = false;
-document.querySelector('.container').style.transform = 'translateX(0px)';
-    });
+        document.querySelector('.container').style.transform = 'translateX(0px)';
+        });
+
+
+
+
+//
+//
+//
+//
+// document.querySelector('.container').addEventListener('mousedown', (e) => {
+//         startX = e.clientX;
+//         isDragging = true;
+//     });
+//
+// document.addEventListener('mousemove', (e) => {
+//         if (!isDragging) return;
+//         e.preventDefault(); // 防止選中文本
+//         currentX = e.clientX - startX;
+// document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
+//     });
+//
+// document.addEventListener('mouseup', () => {
+//         isDragging = false;
+// document.querySelector('.container').style.transform = 'translateX(0px)';
+//     });
