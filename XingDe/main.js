@@ -1,4 +1,6 @@
 // References to DOM Elements
+document.addEventListener('DOMContentLoaded', () => {
+
 const container = document.querySelector('.container');
 const body = document.body;
 
@@ -111,6 +113,9 @@ function goPrevPage() {
    }
 }
 
+
+
+
 const handleTouchStart = (e) => {
   e.preventDefault();
         startX = e.touches[0].clientX; // 紀錄觸控起始位置
@@ -131,10 +136,9 @@ const handleTouchMove = (e) => {
 
         // 綁定觸控事件
 const cardElement = document.querySelector('.container');
-
-            cardElement.addEventListener('touchstart', handleTouchStart);
-            cardElement.addEventListener('touchmove', handleTouchMove);
-            cardElement.addEventListener('touchend', handleTouchEnd);
+cardElement.addEventListener('touchstart', handleTouchStart);
+cardElement.addEventListener('touchmove', handleTouchMove);
+cardElement.addEventListener('touchend', handleTouchEnd);
 
             cardElement.addEventListener('mousedown', (e) => {
             e.preventDefault();
@@ -155,7 +159,7 @@ document.addEventListener('mouseup', (e) => {
         document.querySelector('.container').style.transform = 'translateX(0px)';
         e.preventDefault();
         });
-
+});
 
 
 
