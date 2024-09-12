@@ -5,19 +5,30 @@
 }
 
 body {
-    min-height: 100vh;
-    /* width: 100%; */
-    display:flex;
-    /* position:relative; */
-    /* transform-origin: center; */
-    flex-wrap: wrap;
-    /* justify-content: center;s/ */
-    align-items: center;
-    font-family: sans-serif;
+
     background-image: url(image/whitewall.jpg);
     /* background-color: rgb(252, 247, 232); */
-    overflow-x: auto;
-    margin:0;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x:hidden;/* 啟用水平滾動條 */
+      transition: transform 0.5s; /* 過渡效果 */
+}
+
+.container{
+  display: flex;
+   justify-content: center; /* 水平居中 */
+   align-items: center; /* 垂直居中 */
+   transition: transform 0.5s; /* 過渡效果 */
+   transform-origin: center; /* 設置變換中心為容器的中心 */
+   width: 100%; /* 初始寬度設為100% */
+   position: relative;
+   cursor: grab; /* 手勢拖動指標 */
+  font-family: sans-serif;
+/* transition: width 0.5;／ */
+/* margin: 100% auto; */
 }
 
 .table1{
@@ -41,20 +52,14 @@ body {
 
 /* Book */
 .book {
-    /* margin:20vw; */
     display: flex;
-    /* height: 80vh; */
+    cursor: pointer;
     align-items: center;
     justify-content: center;
-    transform-origin: center;
     position:relative;
     width:400px;
     transition: transform 1.5s;
-    /* opacity: 0.2; */
     filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.3));
-    /* overflow-x:scroll; */
-
-
 }
 
 .paper {
@@ -158,17 +163,7 @@ img{
 
 
 
-/* Controller Buttons */
-.container{
-/* width:100%; */
-/* height:150vw;/* display: flex; */ */
-align-items: center;
-justify-content: center;
-transition: width 0.5;
-transform-origin: center;
-overflow-x:scroll;
-/* margin: 100% auto; */
-}
+
 
 
 .abc{
