@@ -123,7 +123,7 @@ const handleTouchMove = (e) => {
         e.preventDefault();
         };
 
-const handleTouchEnd = (e) => {
+        const handleTouchEnd = (e) => {
         isDragging = false;
         document.querySelector('.container').style.transform = 'translateX(0px)'; // 恢復原位
         e.preventDefault();
@@ -137,7 +137,7 @@ const cardElement = document.querySelector('.container');
             cardElement.addEventListener('touchend', handleTouchEnd);
 
             cardElement.addEventListener('mousedown', (e) => {
-            event.preventDefault();
+            e.preventDefault();
                    startX = e.clientX;
                    isDragging = true;
                });
@@ -147,13 +147,13 @@ document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         currentX = e.clientX - startX;
         document.querySelector('.container').style.transform = `translateX(${currentX}px)`;
-        event.preventDefault();
+        e.preventDefault();
        });
 
 document.addEventListener('mouseup', (e) => {
         isDragging = false;
         document.querySelector('.container').style.transform = 'translateX(0px)';
-        event.preventDefault();
+        e.preventDefault();
         });
 
 

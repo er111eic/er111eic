@@ -11,8 +11,8 @@ body {
     display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 90vh;
-      margin: 0;
+      min-height:100vh;
+      margin: auto;
       overflow-x:hidden;/* 啟用水平滾動條 */
       transition: transform 0.5s; /* 過渡效果 */
 }
@@ -58,7 +58,7 @@ body {
     align-items: center;
     justify-content: center;
     position:relative;
-    width:400px;
+    min-width: 350px;
     transition: transform 1.5s;
     filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.3));
 }
