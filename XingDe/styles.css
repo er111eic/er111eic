@@ -166,12 +166,17 @@ img{
 }
 
 
-input[type="range"] {
-    width: 100%;
-    transform-origin: center;
+@media (pointer: coarse) {
+    input[type="range"] {
+        width: 100%;
+        transform-origin: center;
+        display: block; /* 顯示滑動條 */
+    }
+}
 
-    /* top: 90%; */
-    z-index:5;
+
+input[type="range"] {
+      display: none; /* 隱藏滑動條 */
 }
 
 
