@@ -2,7 +2,7 @@
 const container = document.querySelector('.container');
 const body = document.body;
 
-let startX, currentX;
+let startX=0, currentX=0;
 let isDragging = false;
 
 const prevBtn = document.querySelector("#prev-btn");
@@ -131,6 +131,7 @@ const handleTouchEnd = () => {
 
         // 綁定觸控事件
 const cardElement = document.querySelector('.container');
+
             cardElement.addEventListener('touchstart', handleTouchStart);
             cardElement.addEventListener('touchmove', handleTouchMove);
             cardElement.addEventListener('touchend', handleTouchEnd);
