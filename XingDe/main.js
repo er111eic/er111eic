@@ -129,7 +129,7 @@ const handleTouchMove = (e) => {
         e.preventDefault();
         };
 
-        const handleTouchEnd = (e) => {
+const handleTouchEnd = (e) => {
         isDragging = false;
         document.querySelector('.container').style.transform = 'translateX(0px)'; // 恢復原位
         e.preventDefault();

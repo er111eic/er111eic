@@ -46,7 +46,7 @@ top:10vh;
     height: 30px;
     /* border: 0.5px solid rgb(26, 26, 21); */
     display: grid;
-    grid-template-columns: 50px 120px 50px;
+    grid-template-columns: 50px 60px 50px 50px;
 
 }
 .warn{
@@ -201,6 +201,7 @@ button {
     /* margin: 15px; */
     /* padding-left:80px; */
     /* padding-right:40px;  */
+    font-size: 14pt;
     transition: transform 1.2s;
     z-index: 4;
 }
