@@ -169,18 +169,40 @@ img{
 
 
 @media (pointer: coarse) {
-    input[type="range"] {
-        width: 100%;
-        transform-origin: center;
-        display: inline-block; /* 顯示滑動條 */
+    input[type="range"]{
+      -webkit-appearance: none;
+      appearance: none;
+      transform-origin: center;
+      display: inline-block; /* 顯示滑動條 */
+      cursor: pointer;
+      margin-top: 90px;
     }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width:15px;
+        height: 20px;
+        background: #053a5f;
+        border-radius: 0.5rem;
+        border:1px solid #053a5f;
+        outline: 2px solid #053a5f;
+        outline-offset: 0.125rem;
+        margin-top: -5px;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+        /* width: px; */
+        height: 10px;
+        background: #edc;
+        border-radius:5%;
+        opacity: .6;
 }
+}
+/* coarse */
 
 @media (pointer: fine) {
   input[type="range"] {
-        display: none; /* 隱藏滑動條 */
+        -webkit-appearance: none;
+        display: none;
   }
-
 }
 
 
