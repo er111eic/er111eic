@@ -38,19 +38,21 @@ top:10vh;
 .table1{
     transform-origin: center;
     position: fixed;
+    /* justify-items: center: */
+    /* align-items: center; */
     top: 90%;
     left:50%;
     transform:translateX(-50%);
     z-index: 5;
     width: auto;
-    height: 30px;
+    /* height: 30px; */
     /* border: 0.5px solid rgb(26, 26, 21); */
     display: grid;
-    grid-template-columns: 50px 60px 50px 50px;
-
+    grid-template-columns: 50px 50px 50px;
 }
 .warn{
   opacity: 0.4;
+  text-align: center;
   /* padding: 10px; /* padding-bottom: 200px; */ */
 }
 
@@ -212,6 +214,18 @@ button:focus {
 
 button:hover i {
     color: #636363;
+}
+
+.rightBtn{
+
+}
+
+.left-btn{
+  opacity: 0;
+}
+
+.close-btn{
+  opacity: 0;
 }
 
 i {

@@ -8,8 +8,9 @@ const body = document.body;
 let startX=0, currentX=0;
 let isDragging = false;
 
-const prevBtn = document.querySelector("#prev-btn");
-const nextBtn = document.querySelector("#next-btn");
+const closeBtn = document.querySelector("#close-btn");
+const leftBtn = document.querySelector("#left-btn");
+const rightBtn = document.querySelector("#right-btn");
 const book = document.querySelector("#book");
 const abc = document.querySelector("#abc");
 
@@ -18,8 +19,9 @@ const paper2 = document.querySelector("#p2");
 const paper3 = document.querySelector("#p3");
 
 // Event Listener
-prevBtn.addEventListener("click", goPrevPage);
-nextBtn.addEventListener("click", goNextPage);
+closeBtn.addEventListener("click", closePage);
+rightBtn.addEventListener("click", goNextPage);
+leftBtn.addEventListener("click", goNextPage);
 
 // Business Logic
 let currentLocation = 1;
@@ -31,8 +33,8 @@ function openBook() {
    // body.style.width = '200vw';
    // container.style.transform = 'translateX(0%)';
    // abc.style.transform="translateX(-200vw)";
-
-   // prevBtn.style.transform = "translateX(0px)";
+    leftBtn.style.opacity =1;
+   // closeBtn.style.display = "none";
    // nextBtn.style.transform = "translateX(400px)";
 }
 
@@ -40,8 +42,9 @@ function closeBook(isAtBeginning) {
    if(isAtBeginning) {
        book.style.transform = "translateX(0%)";
        container.style.transform = 'scale(1) translateX(0%)';
-       prevBtn.style.opacity=0;
-      body.style.width = '100vw';
+       closeBtn.style.opacity=0;
+       leftBtn.style.opacity =0;
+       body.style.width = '100vw';
    } else {
        book.style.transform = "translateX(100%)";
    }
@@ -55,19 +58,21 @@ function goNextPage() {
                openBook();
                paper2.classList.add("flipped2");
                // abc.style.transform="translateX(-500%)";
-
+               leftBtn.style.opacity =1;
+               rightBtn.style.opacity = 0;
                // book.style.transform = "translateX(100%)";
-               prevBtn.style.opacity=0;
+               closeBtn.style.opacity=0;
                break;
            case 2:
                paper1.classList.add("flipped");
                // abc.style.transform="translateX(-900px)";
                // body.style.width = '200%';
                book.style.transform = "translateX(10%)";
-               prevBtn.style.opacity=1;
+               closeBtn.style.opacity=1;
+               leftBtn.style.opacity =0;
                // prevBtn.style.transform = "translateX(420px)";
                // nextBtn.style.transform = "translateX(770px)";
-               nextBtn.style.opacity = 0;
+               // rightBtn.style.opacity = 0;
                // paper2.style.zIndex = 2;
                break;
            case 3:
@@ -82,15 +87,17 @@ function goNextPage() {
    }
 }
 
-function goPrevPage() {
+function closePage() {
    if(currentLocation > 1) {
        switch(currentLocation) {
            case 2:
                closeBook(true);
                paper2.classList.remove("flipped2");
+
                // nextBtn.style.transform = "translateX(0px)";
                // abc.style.transform="translateX(0px)";
                // paper1.style.zIndex = 3;
+               rightBtn.style.opacity = 1;
                break;
            case 3:
                paper1.classList.remove("flipped");
@@ -98,7 +105,7 @@ function goPrevPage() {
                // prevBtn.style.transform = "translateX(200px)";
                // nextBtn.style.transform = "translateX(400px)";
                // abc.style.transform="translateX(700px)";
-               nextBtn.style.opacity = 1;
+               leftBtn.style.opacity = 1;
                // paper2.style.zIndex = 2;
                break;
            case 4:
