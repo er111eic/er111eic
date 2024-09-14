@@ -16,6 +16,7 @@ body {
       overflow-x:hidden;/* 啟用水平滾動條 */
       transition: transform 0.5s; /* 過渡效果 */
       grid-template-rows: 60vh 20vh;
+      overflow-x:hidden;
 }
 
 .container{
@@ -26,7 +27,7 @@ body {
    transform-origin: center; /* 設置變換中心為容器的中心 */
    width: 100%; /* 初始寬度設為100% */
    cursor: grab; /* 手勢拖動指標 */
-   /* overflow-x:scroll; */
+   /* overflow-x:hidden; */
    position: relative;
   /* font-family: sans-serif; */
 /* transition: width 0.5;／ */
