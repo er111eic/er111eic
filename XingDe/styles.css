@@ -198,14 +198,14 @@ img{
 }
 }
 /* coarse */
-/*
+
 @media (pointer: fine) {
   input[type="range"] {
         -webkit-appearance: none;
         display: none;
   }
 }
-*/
+
 
 
 .abc{
