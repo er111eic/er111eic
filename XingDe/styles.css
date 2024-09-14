@@ -168,7 +168,7 @@ img{
 }
 
 
-@media (pointer: fine) {
+@media (pointer: coarse) {
     input[type="range"]{
       -webkit-appearance: none;
       appearance: none;
