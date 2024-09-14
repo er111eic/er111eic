@@ -176,18 +176,18 @@ img{
       transform-origin: center;
       display: inline-block; /* 顯示滑動條 */
       cursor: pointer;
-      margin-top: 90px;
+      margin-top: 100px;
     }
     input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
-        width:12px;
-        height: 20px;
+        width:18px;
+        height: 25px;
         background: #F54B06;
         border-radius: 0.2rem;
         border:1px solid #FE862E;
         outline: 2px solid #FE862E;
         outline-offset: 0.14rem;
-        margin-top: -5px;
+        margin-top: -7px;
     }
     input[type="range"]::-webkit-slider-runnable-track {
         /* width: px; */
@@ -195,7 +195,7 @@ img{
         height: 15px;
         /* background: #edc; */
         border-radius:5%;
-        opacity: .6;
+        opacity: .7;
 }
 }
 /* coarse */
